@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pictionary Word Generator — Random Pictionary, Charades & Catchphrase Words</title>
+<meta name="description" content="Generate random Pictionary, Charades, and Catchphrase words in easy, medium, and hard difficulty. Free party game word picker — no sign-up, works on any device.">
+<link rel="canonical" href="https://pictionary.clickabletools.com/">
+<style>
+:root{--accent:#7c3aed;--accent-dark:#6d28d9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1f2937;background:#f8fafc}
+header{background:var(--accent);color:#fff;padding:1rem}
+header .wrap{max-width:760px;margin:0 auto}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.2rem}
+main{max-width:760px;margin:0 auto;padding:1rem}
+h1{font-size:1.5rem;margin:.75rem 0 .25rem}
+.tagline{color:#6b7280;margin-bottom:1rem}
+.tool{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.25rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.row{display:flex;gap:.75rem;flex-wrap:wrap;align-items:flex-end;margin-bottom:.75rem}
+.row>div{display:flex;flex-direction:column}
+label{font-weight:600;margin-bottom:.25rem}
+select{padding:.55rem;border:2px solid #d1d5db;border-radius:8px;font-size:1rem;font-family:inherit}
+.btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:.7rem 1.5rem;font-size:1.05rem;font-weight:700;cursor:pointer}
+.btn:hover{background:var(--accent-dark)}
+#out{display:none;margin-top:1rem}
+.name-card{border:1px solid #e5e7eb;border-left:4px solid var(--accent);border-radius:8px;padding:.6rem .9rem;margin:.4rem 0;display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap}
+.name-card .n{font-size:1.2rem;font-weight:700}
+.name-card .meaning{font-size:.8rem;color:#6b7280;display:block;font-weight:400;text-transform:capitalize}
+.copybtn{background:#fff;border:1px solid #d1d5db;border-radius:6px;padding:.25rem .6rem;cursor:pointer;font-size:.85rem}
+.copybtn:hover{border-color:var(--accent);color:var(--accent)}
+.ad-slot{margin:1rem 0}
+article h2{margin:1.5rem 0 .5rem;font-size:1.2rem}
+article p,article li{margin:.5rem 0}
+article ul{padding-left:1.4rem}
+footer{max-width:760px;margin:2rem auto;padding:1rem;font-size:.85rem;color:#6b7280;border-top:1px solid #e5e7eb}
+footer a{color:#6b7280;margin-right:1rem}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="./">Pictionary Word Generator</a></div></header>
+<main>
+<h1>Pictionary Word Generator</h1>
+<p class="tagline">Random words for Pictionary, Charades, and Catchphrase — pick a game and difficulty.</p>
+
+<div class="tool">
+<div class="row">
+<div><label for="game">Game</label>
+<select id="game"><option value="pict" selected>Pictionary (draw it)</option><option value="char">Charades (act it)</option><option value="catch">Catchphrase (describe it)</option></select></div>
+<div><label for="diff">Difficulty</label>
+<select id="diff"><option value="easy">Easy</option><option value="med" selected>Medium</option><option value="hard">Hard</option></select></div>
+<div><label for="qty">How many</label>
+<select id="qty"><option selected>1</option><option>3</option><option>5</option><option>10</option></select></div>
+</div>
+<button class="btn" id="gen">🎨 Get a Word</button>
+<div id="out" aria-live="polite"></div>
+</div>
+
+<div class="ad-slot" data-ad="top"></div>
+
+<article>
+<h2>How to use this word generator</h2>
+<p>Pick your game and a difficulty, tap the button, and you get a random word or phrase to act out,
+draw, or describe — no word lists to print, no repeats to worry about. One person looks at the word
+while everyone else guesses. It's the fastest way to start <strong>Pictionary, Charades, or
+Catchphrase</strong> with no setup.</p>
+<h2>Which game is which?</h2>
+<ul>
+<li><strong>Pictionary</strong> — you <em>draw</em> the word (no letters, no numbers, no talking) and your team guesses before the timer runs out.</li>
+<li><strong>Charades</strong> — you <em>act</em> it out silently. Great for actions, activities, and movies.</li>
+<li><strong>Catchphrase</strong> — you <em>describe</em> it with words (but never say the word itself) and race to get your team to shout it.</li>
+</ul>
+<h2>Picking the right difficulty</h2>
+<p><em>Easy</em> words are simple, concrete, and kid-friendly — perfect for young players and warm-ups.
+<em>Medium</em> mixes in short phrases and trickier objects. <em>Hard</em> throws in abstract ideas,
+movie titles, and multi-word phrases that make great pros sweat. Mix teams? Let each player choose
+their own difficulty.</p>
+<h2>Quick rules and tips</h2>
+<ul>
+<li>Use a 60-second timer per turn and one point per correct guess.</li>
+<li>Generate a batch of ten so the next player always has a word ready.</li>
+<li>No spelling, no mouthing the word, and no pointing at real objects in the room.</li>
+</ul>
+<p>All words are generated in your browser; nothing is stored.</p>
+</article>
+
+<div class="ad-slot" data-ad="bottom"></div>
+</main>
+
+<footer>
+<p><a href="./">Home</a> <a href="about.html">About</a> <a href="privacy.html">Privacy Policy</a> <a href="terms.html">Terms of Use</a></p>
+<p>&copy; 2026 Pictionary Word Generator. All rights reserved.</p>
+<p>More free tools:
+<a href="https://wouldyourather.clickabletools.com/">Would You Rather</a>
+<a href="https://truthordare.clickabletools.com/">Truth or Dare Generator</a>
+<a href="https://fillintheblank.clickabletools.com/">Fill-in-the-Blank Stories</a>
+<a href="https://wordscramble.clickabletools.com/">Word Scramble Maker</a></p>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const W={
+ pict:{easy:["cat","sun","house","tree","apple","ball","car","fish","star","hat","book","cake","dog","boat","flower","moon","cup","key","shoe","clock"],
+  med:["rainbow","snowman","pizza slice","guitar","lighthouse","umbrella","robot","dragon","campfire","mailbox","treasure chest","waterfall","telescope","hammock","cactus","igloo","windmill","ferris wheel"],
+  hard:["gravity","democracy","homesick","procrastinate","recycling","evaporation","nostalgia","teamwork","invisible","echo","jealousy","momentum","hibernation","camouflage","daydream","time travel"]},
+ char:{easy:["brushing teeth","swimming","sleeping","dancing","driving","cooking","laughing","jumping","reading","clapping","fishing","painting","running","sneezing","yawning","waving"],
+  med:["riding a rollercoaster","walking a dog","taking a selfie","blowing out candles","playing tennis","milking a cow","conducting an orchestra","rock climbing","surfing a wave","changing a tire","juggling","tightrope walking"],
+  hard:["The Lion King","Titanic","Finding Nemo","Star Wars","Jurassic Park","Harry Potter","Toy Story","Frozen","Ghostbusters","Home Alone","The Wizard of Oz","Spider-Man"]},
+ catch:{easy:["dog","pizza","beach","phone","birthday","rain","coffee","school","music","ocean","winter","garden","cookie","bicycle","movie","soccer"],
+  med:["brain freeze","road trip","double rainbow","phone charger","alarm clock","guilty pleasure","food coma","small talk","couch potato","cold feet","bucket list","wild goose chase"],
+  hard:["photosynthesis","artificial intelligence","supply and demand","greenhouse effect","social media","natural selection","black hole","renewable energy","muscle memory","comfort zone","freedom of speech","carbon footprint"]}
+};
+const GAME={pict:"Pictionary",char:"Charades",catch:"Catchphrase"};
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+$('gen').addEventListener('click',()=>{
+ const g=$('game').value, d=$('diff').value, n=+$('qty').value, cards=[];
+ const pool=W[g][d];
+ for(let i=0;i<n;i++){
+  const w=pick(pool);
+  cards.push(`<div class="name-card"><span class="n">${w}<span class="meaning">${GAME[g]} · ${d}</span></span><button class="copybtn" data-n="${w}">copy</button></div>`);
+ }
+ $('out').innerHTML=cards.join('');
+ $('out').style.display='block';
+ document.querySelectorAll('.copybtn').forEach(b=>b.addEventListener('click',async()=>{
+  try{await navigator.clipboard.writeText(b.dataset.n);}catch(e){}
+  b.textContent='copied!';setTimeout(()=>b.textContent='copy',1200);
+ }));
+});
+</script>
+</body>
+</html>
